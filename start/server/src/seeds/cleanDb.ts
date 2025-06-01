@@ -9,7 +9,7 @@ export default async (modelName: "Question", collectionName: string) => {
       return;
     }
 
-    let modelExists = await model.db.db.listCollections({
+    let modelExists = await model.db.db!.listCollections({
       name: collectionName
     }).toArray()
 
